@@ -1,0 +1,1 @@
+[07-Aug-2024 02:37:54 UTC] PHP Deprecated:  Optional parameter $lotid declared before required parameter $pdf_filename is implicitly treated as a required parameter in /home/i25jo735pxnz/public_html/app/Http/Controllers/UnfulfilledAuctionsController.php on line 203

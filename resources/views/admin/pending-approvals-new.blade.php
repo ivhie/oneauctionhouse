@@ -396,10 +396,15 @@
                         <input type="file" name="watch_photos[]" value="dd" id="watch_photos" multiple class="form-control mb-3  @error('watch_photos') is-invalid @enderror" accept='image/*'>
                       </div>
                       
-                 <?php  if( 
-                        $page['watch_photos_notable_damage'] != null
-                        || $page['watch_photos_accessories'] != null
-                        || $page['watch_photos_id_drivers_license'] != null
+                 <?php  
+                 //$page['watch_photos_notable_damage'] != null
+                 //|| $page['watch_photos_accessories'] != null
+                // || $page['watch_photos_id_drivers_license'] != null
+                 
+                 if( 
+                        isset($page['watch_photos_notable_damage'])
+                        || isset($page['watch_photos_accessories'])
+                        || isset($page['watch_photos_id_drivers_license'])
                   ) {  ?>
 
 

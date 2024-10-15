@@ -14,7 +14,7 @@ use Funeralzone\ValueObjects\ValueObject;
 final class SessionTokenSource implements ValueObject
 {
     use EnumTrait;
-
+ 
     /**
      * Token form Shopify App
      *

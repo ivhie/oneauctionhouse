@@ -263,7 +263,7 @@ class UnfulfilledAuctionsController extends Controller
              
             
              if(request()->step1_shipping  != ''){
-                //$item->step1_shipping = request()->step1_shipping;
+                $item->step1_shipping = request()->step1_shipping;
                 //$item->steps = 1;
              } 
              
@@ -274,9 +274,9 @@ class UnfulfilledAuctionsController extends Controller
                  ){
 
                 //$item->step2_shipping_date = request()->step2_shipping_date;
-                //$item->step2_fedx_tracking_number = request()->step2_fedx_tracking_number;
-                //$item->step2_fedx_tracking_status = request()->step2_fedx_tracking_status;
-                //$item->steps = 2;
+                $item->step2_fedx_tracking_number = request()->step2_fedx_tracking_number;
+                $item->step2_fedx_tracking_status = request()->step2_fedx_tracking_status;
+                $item->steps = 2;
              } 
 
              if( request()->step3_arrive_date  != '' && request()->step3_item_arrived  != '' ){

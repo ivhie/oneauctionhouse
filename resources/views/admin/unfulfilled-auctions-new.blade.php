@@ -376,7 +376,7 @@
                                   <div class="col-4"><strong>Item Shipping:</strong></div>
                                   <div class="col-8">
                                     <div class="form-check">
-                                      <input class="form-check-input" name="step1_shipping" <?php echo isset($page['fulfillment']->step1_shipping)?'checked':'';?> type="checkbox" value="Yes" id="gridCheck1" readonly disabled>
+                                      <input class="form-check-input" name="step1_shipping" <?php echo isset($page['fulfillment']->step1_shipping)?'checked':'';?> type="checkbox" value="Yes" id="gridCheck1">
                                       <label class="form-check-label" for="gridCheck1">
                                         Sent
                                       </label>
@@ -390,7 +390,7 @@
                       </div>
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                          <button  class="accordion-button collapsed <?php echo $btn_class2;?>"  <?php echo $disbtn2;?> type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <button  class="accordion-button collapsed <?php echo $btn_class2;?>"  <?php // echo $disbtn2;?> type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                            Step 2 : Item in Transit to Authentication Center
                           </button>
                         </h2>
@@ -407,14 +407,14 @@
                               <div class="row mb-3">
                                 <label for="inputText" class="col-sm-4 col-form-label"><strong>Shipping Method:</strong></label>
                                 <div class="col-sm-8">
-                                  <input readonly type="text"  value="<?php echo isset($page['fulfillment']->step2_fedx_tracking_status)?$page['fulfillment']->step2_fedx_tracking_status:'';?>" name="step2_fedx_tracking_status" class="form-control" placeholder="Shipping Method">
+                                  <input  type="text"  value="<?php echo isset($page['fulfillment']->step2_fedx_tracking_status)?$page['fulfillment']->step2_fedx_tracking_status:'';?>" name="step2_fedx_tracking_status" class="form-control" placeholder="Shipping Method">
                                 </div>
                               </div>
 
                               <div class="row mb-3">
                                 <label for="inputText" class="col-sm-4 col-form-label"><strong>Tracking number:</strong></label>
                                 <div class="col-sm-8">
-                                  <input readonly type="text"  value="<?php echo isset($page['fulfillment']->step2_fedx_tracking_number)?$page['fulfillment']->step2_fedx_tracking_number:'';?>" name="step2_fedx_tracking_number" class="form-control" placeholder="Tracking Number">
+                                  <input  type="text"  value="<?php echo isset($page['fulfillment']->step2_fedx_tracking_number)?$page['fulfillment']->step2_fedx_tracking_number:'';?>" name="step2_fedx_tracking_number" class="form-control" placeholder="Tracking Number">
                                 </div>
                               </div>
                              

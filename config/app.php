@@ -164,8 +164,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\ShopifyServiceProvider::class,
-        Yajra\DataTables\DataTablesServiceProvider::class,
-        Yajra\DataTables\ButtonsServiceProvider::class,
+       //// Yajra\DataTables\DataTablesServiceProvider::class,
+       // Yajra\DataTables\ButtonsServiceProvider::class,
         //Symfony\Component\Mailer\MailerInterface::class,
         
         
@@ -201,7 +201,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // ...
         //'Image' => Intervention\Image\Facades\Image::class
-        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        //'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ])->toArray(),
 
 ];

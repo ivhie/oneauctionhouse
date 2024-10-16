@@ -240,8 +240,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/email-send', 'EmailTemplateController@emailSend');
         Route::get('/email-send2', 'EmailTemplateController@html_email');
 
-    
-
+        */
+        /*
         Route::get('/send-test-email', function () {
             Mail::raw('<h1>This is a test email from Laravel using GoDaddy SMTP.</h1>', function ($message) {
                 $message->to('ivan_dolera@yahoo.com')
@@ -250,16 +250,19 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         
             return 'Test email sent2!';
         });
+        */
 
         Route::get('/send-test-email2', function () {
-            Mail::raw('This is a test email from Laravel using GoDaddy SMTP.', function ($message) {
+            Mail::raw('', function ($message) {
                 $message->to('ivandolera24@gmail.com')
-                        ->subject('Test Email2');
+                        ->from(env('FROM_EMAIL'), env('FROM_EMAIL_NAME'))
+                        ->subject('Test Email2')
+                        ->html('<h1>Hi Test Here!</h1><br/><br/><br/><p>This is a test <span style="color:red;">email</span> from Laravel using GoDaddy SMTP.</p>');
             });
         
             return 'Test email sent2!';
         });
-        */
+        
         /* Dashboard */
         Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
 

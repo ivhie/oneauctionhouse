@@ -231,10 +231,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
        Route::get('/emailbidder', 'EmailTemplateController@html_bidder_email');
        Route::get('/emailadmin', 'EmailTemplateController@html_admin_email');
 
-        Route::get('/email-send', 'EmailTemplateController@emailSend1');
+        Route::get('/email-send', 'EmailTemplateController@emailSend');
        //Route::get('/email-send-display/{email_code}', 'EmailTemplateController@html_bidder_email_test');
 
         // Email testing
+        
+        Route::get('/email-template-test', 'EmailTemplateController@email_send1');
         /*Route::get('/email-template-test', 'EmailTemplateController@emailtesting');
         Route::get('/email-template-sendme', 'EmailTemplateController@testsend');
         Route::get('/email-send', 'EmailTemplateController@emailSend');

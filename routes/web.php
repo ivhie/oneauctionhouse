@@ -259,8 +259,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
                 $message->to('ivandolera24@gmail.com')
                         ->from(env('FROM_EMAIL'), env('FROM_EMAIL_NAME'))
                        // ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
-                        ->bcc(['ivan_dolera@yahoo.com','benjietesting@gmail.com','ivandolera24@gmail.com'])
-                        ->subject('Test Email2')
+                        ->bcc(['ivan_dolera@yahoo.com','benjietesting@gmail.com','ivandolera24@gmail.com','matthew.zy.lau@gmail.com'])
+                        ->subject('Test Email2 by Ivan')
                         ->html('<h1>Hi Test Here!</h1><br/><br/><br/><p>This is a test <span style="color:red;">email</span> from Laravel using GoDaddy SMTP.</p>');
             });
 

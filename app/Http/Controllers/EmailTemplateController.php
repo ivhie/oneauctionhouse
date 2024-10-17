@@ -298,6 +298,19 @@ class EmailTemplateController extends Controller
 
     }
 
+     public function email_send1() { // reserve para sa way angay
+
+            // the message
+            $msg = "First line of text\nSecond line of text";
+            
+            // use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg,70);
+            
+            // send email
+            mail("ivandolera24@gmail.com","My subject",$msg);
+             echo 'testererererer';
+    }
+
    
 
 

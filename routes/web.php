@@ -258,15 +258,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Mail::raw('', function ($message) {
                 $message->to('ivandolera24@gmail.com')
                         ->from(env('FROM_EMAIL'), env('FROM_EMAIL_NAME'))
-                        ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
-                        ->bcc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
+                       // ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
+                        ->bcc(['ivan_dolera@yahoo.com','benjietesting@gmail.com','ivandolera24@gmail.com'])
                         ->subject('Test Email2')
                         ->html('<h1>Hi Test Here!</h1><br/><br/><br/><p>This is a test <span style="color:red;">email</span> from Laravel using GoDaddy SMTP.</p>');
             });
 
-            Mail::to('ivandolera24@gmail.com')
-             ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
-            ->send('testerererer');
+           // Mail::to('ivandolera24@gmail.com')
+            // ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
+            //->send('testerererer');
         
             return 'Test email sent2!';
         });

@@ -261,6 +261,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
                         ->subject('Test Email2')
                         ->html('<h1>Hi Test Here!</h1><br/><br/><br/><p>This is a test <span style="color:red;">email</span> from Laravel using GoDaddy SMTP.</p>');
             });
+
+            Mail::to('ivandolera24@gmail.com')
+             ->cc(['ivan_dolera@yahoo.com','benjietesting@gmail.com'])
+            ->send('testerererer');
         
             return 'Test email sent2!';
         });
